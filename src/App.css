@@ -50,3 +50,16 @@
   background-color: rgb(21, 21, 21);
   color: rgb(87, 63, 87);
 }
+
+nav {
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  border-color: 2px solid red;
+  width: 100vw;
+  height: 5vh;
+}
+
+li {
+  list-style: none;
+}
