@@ -34,6 +34,7 @@ export default function AllPosts () {
                 onClick={() => navigate(`/${p.title}`)}>
                 <h1>{p.title}</h1>
                 <h3>Seller: {p.author.username}</h3>
+                <h3>Price: {p.price}</h3>
             </div>)
     }
     </div>

@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import './App.css'
 import AllPosts from './components/AllPosts'
-import SinglePost from './components/SinglePost'
+// import SinglePost from './components/SingePost'
 import Login from './components/Login'
 import SignUpForm from './components/SignUpForm'
 import Dashboard from './components/Dashboard'
+import MakePost from './components/MakePost'
 import { Route, Routes, NavLink } from 'react-router-dom'
 
 function App() {
@@ -13,9 +14,10 @@ function App() {
   return (
     <>
     <nav>
-      <NavLink to='/home'>All Posts</NavLink>
-      <NavLink to='/'>Login</NavLink>
-      <NavLink to='/dash'>My Profile</NavLink>
+      <NavLink className="navBarLink" to='/home'>All Posts</NavLink>
+      <NavLink className="navBarLink" to='/'>Login</NavLink>
+      <NavLink className="navBarLink" to='/dash'>My Profile</NavLink>
+      <NavLink className="navBarLink" to='/newlisting'>Sell Something!</NavLink>
       
     </nav>
     <Routes>
@@ -23,6 +25,8 @@ function App() {
       <Route path ='/signup' element={<SignUpForm setToken={setToken}/>}/>
       <Route path='/' element={<Login setToken={setToken} />}/>
       <Route path ='/home' element={<AllPosts />}/>
+      <Route path='/newlisting' element={<MakePost token={token} />}/>
+      {/* <Route path='/:name' element={<SinglePost />}/> */}
     </Routes>
     </>
   )
