@@ -10,6 +10,7 @@ export default function MakePost( {token} ) {
     const [price, setPrice] = useState('')
     const [location, setLocation] = useState('')
     const [willDeliver, setWillDeliver] = useState(false)
+    const navigate = useNavigate()
     const buttonHandler = () => {
         setWillDeliver(current => !current)
     }
@@ -37,6 +38,7 @@ export default function MakePost( {token} ) {
             });
             const result = await response.json();
             console.log(result)
+            navigate('/dash')
             return result
         } catch(err) {
             console.error(err);
@@ -44,21 +46,21 @@ export default function MakePost( {token} ) {
     }
     return <>
     <h2>Sell an Item!</h2>
-    <form onSubmit={handleSubmit}>
+    <form className="formbox"  onSubmit={handleSubmit}>
         <label>Title:
-            <input value={title} onChange={e => setTitle(e.target.value)} />
+            <input className="inputbox" value={title} onChange={e => setTitle(e.target.value)} />
         </label>
         <label>Description:
-            <input value={description} onChange={e => setDescription(e.target.value)} />
+            <input className="inputbox" value={description} onChange={e => setDescription(e.target.value)} />
         </label>
         <label>Price:
-            <input value={price} onChange={e => setPrice(e.target.value)} />
+            <input className="inputbox" value={price} onChange={e => setPrice(e.target.value)} />
         </label>
         <label>Location:
-            <input value={location} onChange={e => setLocation(e.target.value)} />
+            <input className="inputbox" value={location} onChange={e => setLocation(e.target.value)} />
         </label>
-        <button onClick={buttonHandler} type="button">Click if willing to deliver </button>
-        <button>Submit</button>
+        <button className="button" onClick={buttonHandler} type="button">Click if willing to deliver </button>
+        <button className="button">Submit</button>
     </form>
     </>
 }

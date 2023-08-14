@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const COHORT_NAME = '2306-FTB-ET-WEB-FT'
 const BASE_URL = `https://strangers-things.herokuapp.com/api/${COHORT_NAME}`
+// const {_id} = useParams()
 
 export async function DeletePost( {token}) {
     try {

@@ -53,18 +53,18 @@ export default function Login( {setToken} ) {
       }
 
       return <div>
-    <form onSubmit={handleSubmit}>
+    <form className="formbox" onSubmit={handleSubmit}>
         <label>Username:
-            <input value={username} onChange={event => setUsername(event.target.value)} />
+            <input className="inputbox" value={username} onChange={event => setUsername(event.target.value)} />
         </label> 
         <label>Password:
-            <input value={password} onChange={event => setPassword(event.target.value)} />
+            <input className="inputbox" value={password} onChange={event => setPassword(event.target.value)} />
         </label>
      { (successMessage) ? <p>{successMessage}</p> : <></>}
     
     {successMessage && <p>{successMessage}</p>}
     {error && <p>{error}</p>}
-        <button>Log In</button>
+        <button className="button">Log In</button>
         <div>Don't have an account? <Link to="/signup"> Sign Up </Link> </div>
     </form>
     </div>

@@ -49,3 +49,25 @@ li {
 .postcard {
   display: flex;
 }
+
+.formbox {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 33vw 0 33vw;
+  padding: 10px;
+  align-items:center;
+  justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.inputbox {
+  padding: 5px;
+  margin: 5px;
+}
+
+.button{
+  margin: 5px;
+  min-width: 200px;
+}

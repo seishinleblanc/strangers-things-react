@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import AllPosts from './components/AllPosts'
-// import SinglePost from './components/SingePost'
+import SinglePost from './components/SinglePost'
 import Login from './components/Login'
 import SignUpForm from './components/SignUpForm'
 import Dashboard from './components/Dashboard'
@@ -26,7 +26,7 @@ function App() {
       <Route path='/' element={<Login setToken={setToken} />}/>
       <Route path ='/home' element={<AllPosts />}/>
       <Route path='/newlisting' element={<MakePost token={token} />}/>
-      {/* <Route path='/:name' element={<SinglePost />}/> */}
+      <Route path='/:p' element={<SinglePost />}/> 
     </Routes>
     </>
   )

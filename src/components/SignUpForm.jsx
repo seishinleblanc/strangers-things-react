@@ -56,15 +56,15 @@ export default function SignUpForm({setToken}) {
     <h1>Sign Up</h1>
     <h2>*You can use any username/password</h2>
 
-    <form onSubmit={handleSubmit}>
+    <form className="formbox" onSubmit={handleSubmit}>
         <label>Username:
-            <input value={username} onChange={(event) => setUsername(event.target.value)} />
+            <input className="inputbox" value={username} onChange={(event) => setUsername(event.target.value)} />
         </label>
         <label>Password:
-            <input value={password} onChange={passwordValidation} />
+            <input className="inputbox" value={password} onChange={passwordValidation} />
         </label>
         {errorMsg && <h3>{errorMsg}</h3>}
-        <button>Sign Up</button>
+        <button className="button">Sign Up</button>
     </form>
     </div>
 }

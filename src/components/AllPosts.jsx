@@ -31,7 +31,7 @@ export default function AllPosts () {
         { allPosts.map((p, index) =>
             <div key={index}
                 className='posts'
-                onClick={() => navigate(`/${p.title}`)}>
+                onClick={() => navigate(`/${p}`)}>
                 <h1>{p.title}</h1>
                 <h3>Seller: {p.author.username}</h3>
                 <h3>Price: {p.price}</h3>
